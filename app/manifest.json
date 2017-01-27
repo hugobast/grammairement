@@ -5,6 +5,7 @@
   "description": "__MSG_appDescription__",
   "icons": {
     "16": "images/icon-16.png",
+    "48": "images/icon-128.png",
     "128": "images/icon-128.png"
   },
   "default_locale": "en",
@@ -55,7 +56,7 @@
       "19": "images/icon-19.png",
       "38": "images/icon-38.png"
     },
-    "default_title": "grammairement",
+    "default_title": "Grammairement",
     "default_popup": "popup.html"
   },
   "web_accessible_resources": [
