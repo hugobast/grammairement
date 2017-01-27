@@ -18,7 +18,7 @@ function templated(match) {
         <dd>${match.rule.description}</dd>
 
         <dt>Correction:</dt>
-        <dd>${where} -> ${value}</dd>
+        <dd><span class="faulty">${where}</span> -> <span class="corrected">${value}</span></dd>
       </dl>
     </li>
   `

@@ -1,3 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
 body {
-  min-width: 300px;
+  min-width: 400px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+}
+
+dd {
+  display: inline;
+  margin: 0;
+}
+
+dd:after{
+ display: block;
+ content: '';
+}
+
+dt {
+  font-weight: bold;
+  width: 80px;
+  display: inline-block;
+}
+
+.faulty {
+  color: indianred;
+}
+
+.corrected {
+  color: olivedrab;
 }
