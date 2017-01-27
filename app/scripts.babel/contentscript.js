@@ -4,12 +4,21 @@ console.log('\'Allo \'Allo! Content script');
 
 chrome.runtime.onMessage.addListener(function(message, _, response) {
   if (message.action === "verify") {
-    if (!document.querySelectorAll('textarea')) {
+    let candidates = document.querySelectorAll('textarea:not([type="hidden"]):not([disabled]):not([value=""])');
+
+    if (!candidates) {
       return
     }
 
-    let content = document.querySelectorAll('textarea')[0].value;
+    var target
+    candidates.forEach((candidate) => {
+      console.log(candidate)
+      if (candidate.offsetWidth > 0 && candidate.offsetHeight > 0) {
+        console.log(candidate)
+        target = candidate
+      }
+    });
 
-    response({ content: content });
+    response({ content: target.value });
   }
 });

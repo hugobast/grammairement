@@ -9,14 +9,16 @@ function templated(match) {
     value = match.replacements[0].value
   }
 
+  let where = match.context.text.slice(match.context.offset, match.context.offset + match.context.length)
+
   return `
     <li>
       <dl>
         <dt>Règle:</dt>
         <dd>${match.rule.description}</dd>
 
-        <dt>Correction</dt>
-        <dd>${value}</dd>
+        <dt>Correction:</dt>
+        <dd>${where} -> ${value}</dd>
       </dl>
     </li>
   `
