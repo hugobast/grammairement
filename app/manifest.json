@@ -16,6 +16,7 @@
   },
   "permissions": [
     "tabs",
+    "activeTab",
     "http://*/*",
     "https://*/*",
     "background",
@@ -40,8 +41,7 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "<all_urls>"
       ],
       "js": [
         "scripts/contentscript.js"

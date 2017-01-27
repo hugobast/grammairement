@@ -1,6 +1,11 @@
 'use strict';
 
-console.log('pre')
+chrome.extension.getBackgroundPage().console.log('still works');
 
-
-console.log(axios);
+chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  chrome.tabs.getSelected(null, function(tab) {
+    chrome.tabs.sendMessage(tab.id, { action: "verify" }, function(content) {
+      console.log(content);
+    });
+  });
+});
